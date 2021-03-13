@@ -1,0 +1,41 @@
+* {
+	box-sizing: border-box;
+}
+
+
+#gallery {
+	width: 1000px;
+	margin: 20px auto;
+}
+
+.item-container {	
+	width: 25%;
+	float: left;
+	padding: 10px;
+}
+
+.gallery-item {
+	border:1px solid #ccc;
+}
+
+.gallery-item:hover {
+	cursor: pointer;
+	border:1px solid #777;
+}
+
+.gallery-item img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover; /* object fit cover olduğu zaman büyük ya da küçük fotoğrafla karşılaştığında
+	o fotoğrafı bizim belirlediğimiz 200px boyutuna indirgemez, 200px kadarını kırparak gösterir.
+	contain dersek fotoğrafı bir container içine alır ve her fotoğrafı tam boyutunda gösterir ama 
+	container içinde alttan üstten boşluk kalır. default ayarı fill dir. içeriğe sığdırır. 
+	yani fotoğrafı bozar. none yaparsak fotoğraf px kalitesine göre bizim istediğimiz kalitedeki 
+	herhangi bir kısmını alır.  */
+	object-position: 30% 50%; /* yatayda ve dikeyde konumlandırdık. fotoğrafın konumuyla oynar. bottom-top gibi değerler de alır.*/ 
+}
+
+.description {
+	text-align: center;
+	padding: 15px;
+}

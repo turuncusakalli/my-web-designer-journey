@@ -1,0 +1,39 @@
+p[title]{ /* attribute lara göre ayarlama yapıyoruz */
+	border: 1px solid gray;
+	padding: 5px;	
+}
+
+p[title="third paragraph"]{
+	background-color: gold;
+}
+
+p[title~="forth"]{ /* tilda işareti sayesinde içinde forth kelimesi olan attribute lara işlem yapar */ 
+	background-color: red;
+}
+
+a[href^="https"]{ /* sadece başlangıcında https geçenlere uygular */
+	color:red;
+}
+
+a[href$="com"]{ /* com ile bitenlere uygular */
+	color: aqua;
+}
+
+a[href="https://www.example.net"][target="_blank"]{
+	/* hem istenen linke sahip olan hem de target attribute blank olanlara uygular. */
+	color: yellow;
+}
+
+input[type="text"]{ /* input type ı text olanlara uygular */
+	display: block;
+	width: 150px;
+	background-color: red;
+}
+
+
+input[type="button"]{
+	background: #4CAF50;
+	color: #FFFFFF;
+	padding: 8px 16px;
+}
+

@@ -1,0 +1,100 @@
+/*Pseudo Element
+Bir elemanın bir parçasını seçmek istediğimizde Pseudo Element kullanılır.*/
+
+p::first-line{
+	/* sayfadaki p etiketlerinin ilk satırını seçer. */
+	font-weight: bold;
+	color: brown;
+	word-spacing: 2px; /* kelimeler arası boşluk */
+	letter-spacing: 1px; /* harfler arası boşluk */
+}
+p.about::first-line{
+	/* p etiketlerinin class ı about olanların ilk satırını al */
+	color:green;
+}
+
+p::first-letter{
+	/* paragrafların ilk harflerini alır */
+	font-size: 48px;
+}
+
+p::after{
+	/* her paragraf etiketinden sonra aşağıdakileri uygular */
+	content: "";
+	display: block;
+	background-color: yellow;
+	padding: 10px;
+}
+
+
+/*Pseudo Class
+Bir kapsam içerisindeki, mesela bir ul etiketinin içindeki li etiketleri, elemanları seçerken 
+Pseudo Class kullanılır. */
+
+ul li {
+	padding: 10px;
+	margin-bottom: 10px;
+	list-style: none;
+}
+
+ul li:first-child{ 
+	/* ıl nesnesi altındaki li lerin ilkini seçti */
+	background-color: red;
+}
+
+ul li:last-child{
+	background-color: red;
+}
+
+ul li:nth-of-type(even){
+	/* her çift sayılı elemanı seçer */
+	border: 2px solid green;
+}
+
+ul li:nth-of-type(odd){
+	/* her tek sayılı elemanı seçer */
+	border: 2px solid blue;	
+}
+
+a {
+	padding: 5px 8px;
+	text-decoration: none;
+	display: block;
+	/* normalde a etiketi inline dır. bu nedenle genişlik belirtemiyoruz. Burada 
+	blok yapısına çevirdik, bu sayede genişlik verebiliyoruz. */
+	width: 80px;
+	border:1px solid gray;
+	margin-bottom: 10px;
+}
+
+a:link{
+	color: red;
+}
+
+a:visited{ /* daha önceden ziyaret edilmiş link */
+	color:gray;
+}
+
+a:hover{ /* mouse üzerine sürülmüş link */
+	color:white;
+	background: green;
+}
+
+a:active{ /* linke 1 defa tıkladığımız an, ya da tıklayıp basılı tuttuğumuz */ 
+	color:green;
+	background: gold;
+}
+
+span{
+	display: none; /* görünürlüğü none yaptık */
+	background: yellow;
+	padding: 20px;
+}
+
+div:hover span { /* div üzerine geldiğimiz zaman */
+	display: block;
+}
+
+
+
+

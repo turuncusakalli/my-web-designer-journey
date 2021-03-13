@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flexbox</title>
+	<style>
+	
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		
+		.container {
+			
+			height: 1200px;
+			
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			/* justify-content: center; itemları ortada hizalar. taşıp alt satıra giden en alta gitmek
+			yerine ortaya gelir. 
+			// justify-content: flex-start; itemları sağa yaslayarak yerleştirir
+			// justify-content: flex-end; itemları sola yaslayarak yerleştirir
+			// justify-content: space-between; itemları tüm satıra aralarında eşit boşluk olacak şekilde yerleştirir
+			// justify-content: space-around; sayfanın sağ ve sol tarafından yani marginlerden x değeri kadar
+			itemlar arasında 2x değeri kadar boşluık bırakarak tüm elemanları satıra yerleştirir. 
+			// justify-content: space-evenly; sayfanın sağı solu itemları arasında eşit boşluk bırakarak
+			yerleştirir.
+
+			justify content yatayda sıralama aling items ise dikeyde sıralama için kullanılır. flex direction
+			row olursa justify content dikeyde sıralama aling items ise yatayda sıralama için kullanılır.
+			
+			// align-items: stretch; itemlara herhangi bir yükseklik ya da genişlik tanımlarsak
+			satırdaki diğer yükseklik ya da genişlik tanımlanmamış itemlar da tanımlanana ayak uydurur. 
+			stretch default ayardır.  
+			// align-items: center; yüksekliği değişen bir değer var diyelim, diğer itemların yükseklikleri değişmez
+			ama en büyük yüksekliğe sahip olan itemın orta noktasına göre konumlanırlar
+			// align-items: flex-start; yüksekliği değişen bir değer var diyelim, diğer itemların yükseklikleri değişmez
+			ve en üstten konumlanırlar
+			// align-items: baseline; yüksekliği değişen bir değer var diyelim, diğer itemların yükseklikleri değişmez
+			ve konumlama itemların textlerinin alt sınırına göre yapılır
+			*/
+			 align-items: flex-end;
+			
+			
+			
+			background-color: #f2f2f2;
+			padding: 15px;
+		}
+		
+		.item {
+			background-color: chocolate;
+			padding: 30px;
+			margin: 30px;
+			color: #fff;
+			font-size: 25px;
+		}
+		
+		.i2 {
+			height: 200px;
+		}
+		
+		.i3 {
+			height: 300px;
+		}
+		
+		.i4 {
+			font-size: 60px;
+		}
+	
+	</style>
+</head>
+<body>
+	
+	<div class="container">
+		
+		<div class="item">item 1</div>
+		<div class="item">item 2</div>
+		<div class="item i3">item 3</div>
+		<div class="item i4">item 4</div>		
+		
+	</div>
+	
+	
+</body>
+</html>
