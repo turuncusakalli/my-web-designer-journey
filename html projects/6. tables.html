@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tablolar</title>
+</head>
+<body>
+
+     <table border="1" width="60%" style="text-align: center;">
+		<!-- border tablonun kenarlıklarını ayarlar. width sayfanın yüzdesini kaplar. -->
+     	
+     	<thead>
+			 <!-- thead Başlık için ayırt edici bir alan oluşturduk-->     	
+			<tr>
+				<!-- tr satırı temsil eder. table raw kısaltması-->
+				<th>Kurs adı</th>
+				<th width="150px;">Saat</th>
+				<!-- sütun genişliğini ayarlayabiliriz.-->
+
+				<th>Ders Adeti</th>
+				<!-- th table header dır. satırı 3 header a böldük.-->
+			</tr>
+     	</thead>
+     	
+     	<tbody>    
+			 <!-- olmasa fark etmezdi ama thead den ayrı bir body gibi hayal edeceğiz--> 
+			<tr>     	  
+				<td>Komple Web Geliştirme Eğitimi</td>
+				<td>45</td>
+				<td>300</td>
+				<!-- td table datadır. 3 td olduğu için satır 3 e bölünür.-->     		
+			</tr>
+
+			<tr>     	   
+				<td>Core 2 Mvc Eğitimi : Sıfırdan İleri Seviye</td>
+				<td>30</td>
+				<td rowspan="2">200</td>   
+				<!-- rowspan ile aşağıdaki kolonu birleştirdi.-->  		
+			</tr>
+    	
+    	    <tr>     	   
+				<td colspan="2">Core 2 Mvc Eğitimi : Sıfırdan İleri Seviye</td>				    		
+				<!-- colspan ile 2 kolonun yerini yukarıdaki td satırına verdik.-->
+			</tr>
+    	
+     	</tbody>
+     	
+     </table>
+
+    
+	
+</body>
+</html>

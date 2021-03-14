@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flexbox</title>
+
+	<!-- flex box container div gibi yapıların daha affective kullanımı için
+	geliştirilmiştir. işleri daha da kolaylaştırır. contianer ın adı flex container, her bir 
+	elemanın (div ya da etiket fark etmez) adı flex item olur. --> 
+	<style>
+	
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		
+		.container {
+			display: flex; /* tüm elemanlar block özelliğini kaybedip inline şeklinde sıralandı. 
+			içerikleri kadar yer kaplayıp yan yana geldiler. */
+			/*flex-direction: row-reverse;
+			// flex-direction: column; sıralamayı üst üste gelecek şekilde yani kolon oluşturarak yapar
+			// flex-direction: column-reverse; divin en sonundan sıralamaya başlar. item1 en altta kalacak
+			şekilde divin altından yukarı doğru sıralar. 
+			// flex-wrap: nowrap; 
+			// flex-wrap: wrap;*/
+			flex-wrap: wrap-reverse; /* wrap yaparsak genişlik alanına sığmayan kısımları alt satıra atar. 
+			no-wrap olsaydı aynı satıra atar ve scroll bar çıkarırdı. wrap-reverse ise sığmayan elemanı üst
+			satıra atır.  */
+			background-color: #f2f2f2;
+			padding: 15px;
+		}
+		
+		.item {
+			background-color: chocolate;
+			padding: 30px;
+			margin: 30px;
+			color: #fff;
+			font-size: 25px;
+		}
+	
+	
+	</style>
+</head>
+<body>
+	
+	<div class="container">
+		
+		<div class="item">item 1</div>
+		<div class="item">item 2</div>
+		<div class="item">item 3</div>
+		<div class="item">item 4</div>
+		<div class="item">item 5</div>
+		<div class="item">item 6</div>
+		<div class="item">item 7</div>
+		<div class="item">item 8</div>
+		
+		
+	</div>
+	
+	
+</body>
+</html>

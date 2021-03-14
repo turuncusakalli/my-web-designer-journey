@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Formlar</title>
+</head>
+<body>
+	
+	<form action="/Home/Register">
+		<!-- action attribute u dormun nereye gönderileceğini belirtir-->
+		
+		<p>
+	        Ad <input type="text" name="ad" placeholder="adınızı giriniz" required>
+		</p>
+		<!-- input ile veri alırız
+		name ile değişken adı veririz
+		place holder ile kutunun içine yazı yazılır, girdi alınırken silinir
+		required ile doldurulma zorunluluğu sağlarız-->
+		
+		<p>
+	        Soyad <input type="text" name="soyad" placeholder="soyadınızı giriniz" required>
+		</p>
+		
+		<p>
+	        Eposta <input type="email" name="email" required>
+		</p>
+		
+		<p>
+	        Beni Hatırla <input type="checkbox" name="benihatirla">
+		</p>
+		
+		<p>
+	        Erkek <input type="radio" name="cinsiyet">
+	        Kadın <input type="radio" name="cinsiyet">
+			<!-- radio button kullandık ve cinsiyet adında değişkene atadık. 
+			Bu sayede sadece 1 tanesi seçilecek-->
+		</p>
+		
+		<p>
+	        Hobiler <br>
+	        
+	        Sinema <input type="checkbox" name="hobi">
+	        Spor <input type="checkbox" name="hobi">
+	        Kitap Okumak <input type="checkbox" name="hobi">
+			<!-- check box kullandık ve hobi adında değişkene atadık. 
+			Bu sayede birden fazla seçenek seçilebilecek-->
+		</p>
+		
+		<p>
+			<select name="sehir">
+				<option>Kocaeli</option>
+				<option>İstanbul</option>
+				<option>Ankara</option>
+			</select>
+			<!-- select box kullandık ve belirli seçeneklerden sadece birini seçer.-->
+		</p>
+		
+		<p>
+			<select multiple name="sehirler">
+				<option>Kocaeli</option>
+				<option>İstanbul</option>
+				<option>Ankara</option>
+			</select>
+			<!-- select box ın çoklu seçim yöntemini kullandık. Bu sayede seçeneklerden birkaçını 
+			ctrl tuşuna basılı tuttuğumuzda seçebiliriz.-->
+		</p>
+		
+		<input type="submit" value="Kaydet">
+		<!-- gönderilecek formu submitleyip gönderiyor. Butonun adını Kaydet yaptık. -->
+	</form>
+	
+	
+	
+</body>
+</html>

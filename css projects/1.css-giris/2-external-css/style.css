@@ -1,0 +1,13 @@
+a {
+	color: red;
+	text-decoration: none;
+}
+
+li {
+	display: inline;
+	/* her bir li tagını aynı satıra yazar. */
+}
+
+h1{
+	background-color: chartreuse;
+}

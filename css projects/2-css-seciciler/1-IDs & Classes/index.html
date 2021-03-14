@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>IDs & Classes</title>
+	<style>
+		
+		p {	/* sadece p etiketlileri etkileyecek komutları buraya yazıyoruz */		
+			font-size: 20px !important;
+			/* !important kullandığımız için aşağıdaki font büyüklüklerinin hiçbiri
+			işe yaramayacak. çünkü bu komut kendini her şeyden önemli kılıyor. 
+		}
+		
+		/* css de class lar oluşturacağız. class lar nokta ile başlıyor */
+		.f22{
+			font-size: 22px;			
+		}
+		
+		.f30{
+			font-size: 30px;			
+		}
+		
+		.f40{
+			font-size: 40px;			
+		}
+		
+		.kirmizi{
+			/* kirmizi adında class oluşturduk */
+			color: red;
+		}
+		
+		.mavi{
+			/* mavi adında class oluşturduk */
+			color: blue;
+		}
+		
+		h1{
+			color: yellow;
+		}
+		
+		#header{ /* diyez işareti ile header id li yere özel işlem yaparız. */
+			font-size: 45px;
+		}
+		
+		#paragraf{
+			border: 1px solid red;
+		}
+	
+	</style>
+</head>
+<body>	
+	
+	<h1 id="header" class="kirmizi"> <!-- id unique olmalı, başka yerde kullanılamaz. -->
+		<!-- yukarıda oluşturduğumuz class ları burada çağırıyoruz-->
+		Udemy Kurslarımıza hoşgeldiniz		
+	</h1>
+	
+	<p id="paragraf" class="red f22">Komple Uygulamalı Web Geliştirme</p>
+	<!-- bu örnekte olduğu gibi iki class verebiliriz-->
+	
+	<p class="f40">Komple Uygulamalı Web Geliştirme</p>
+	
+	<p class="mavi">Komple Uygulamalı Web Geliştirme</p>
+	
+	<p>Komple Uygulamalı Web Geliştirme</p> 
+	
+	
+</body>
+</html>

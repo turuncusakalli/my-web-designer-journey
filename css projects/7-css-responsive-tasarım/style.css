@@ -1,0 +1,169 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; /* borderları da box a dahil ettik. bu sayede 4 adet
+	%25 lik box yan yana gelebiliyor.  */
+}
+
+html {
+	font-size: 6px; /* default html fontunu 6px ile değiştirdik. başlıklar bu oranda değişir*/
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	color: #fff;
+	font-size: 1.6rem; /* yukarıdaki 6px in 1.6 katını verdik rem ölçü birimiyle */
+	line-height: 1.5;
+	text-align: center;
+	background-color: #333;
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	padding: 1.6rem 0;
+	font-size: 2rem;
+}
+
+img {
+	width: 100%;
+	/* max-width: 100%;  en fazla %100 olsun demek. yani kendi boyutundan büyük bir alan var ise
+	sadece kendi boyutu kadar alan kaplasın. eğer daha az alan var ise alanın %100 ünü kaplasın */
+	height: auto;
+}
+
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+
+/*header*/
+
+header {
+	height: 45rem; /* header ı 450px yaptı*/
+}
+
+header .bg-image { /* header altındaki bg-image class ı */
+	position: absolute; /* absolute yapınca fotoğraf normal akıştan çıkar. sonraki element ( burada header var)
+	0.0 noktasından başlar.  */
+	background-image: url(img/bg.jpeg);
+	background-size: cover;
+	background-position: center;
+	height: 45rem;
+	width: 100%;
+	opacity: 0.4;
+	z-index: -1; /* image konumunu -1 ile arka plana attık*/
+}
+
+header h1 {
+	padding: 11rem;
+	padding-bottom: 0;
+}
+
+.btn {
+	display: inline-block;
+	background: #333;
+	color: #fff;
+	border: 1px solid #666;
+	padding: 1.6rem 3.2rem;
+	margin: .5rem 0;
+	transition: all 0.3s; /* iki değere de geçiş yapacağımız için all dedik. */
+}
+
+.btn:hover {
+	background-color: #eaeaea;
+	color: #333;
+}
+
+/*section-a*/
+
+#section-a {
+	background-color: #eaeaea;
+	color: #333;
+	padding: 3.2rem 0;
+}
+
+
+
+/*section-b*/
+
+#section-b {
+	padding: 2rem;
+}
+
+#section-b ul {
+	list-style: none;
+}
+
+#section-b li {
+	background: #fff;
+	color: #333;
+	margin-bottom: 1.5rem;
+}
+
+.col-content {
+	padding: 1.5rem;
+}
+
+/*section c*/
+
+#section-c {
+	background-color: #eaeaea;
+	color: #333;
+	padding: 5rem;
+}
+
+/*section d*/
+
+#section-d .box {
+	padding: 5rem;
+}
+
+#section-d .box:first-child {
+	background-color: #2690d4;
+}
+
+/*footer*/
+
+footer {
+	padding: 4rem;
+	background: #000;
+}
+
+footer a {
+	color: #2690d4;
+}
+
+@media screen and (min-width:800px) { /* ekrani minimum 800 px olan ekranlar icin font 8 e ayarlanır. */
+
+	html {
+		font-size: 8px;
+	}
+	
+	
+}
+
+
+@media screen and (min-width:1200px) {
+
+	#section-b li { /* 1200 altında 1 adet olan divler 1200 üstünde 3 adete çıkacak */
+		width: 28%; /* min px 1200 üstünde olduğunda box oranını %28olarak ayarladık. */
+		margin: 1%;
+		display: inline-block;
+	}
+
+
+	.box { /*en alttaki iki div yan yana gelecek */
+		width: 50%;
+		float: left;
+	}
+
+	html {
+		font-size: 10px;
+	}
+
+}

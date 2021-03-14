@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Box Shadow</title>
+
+	<style>
+
+		/* transitions yani geçişler bir anda olmasın isteriz. bir iki saniye sonra gerçekleşsin isteriz.
+		bu durumda trasitions kullanılır. */
+		.card {
+			width: 150px;
+			height: 150px;
+			background: blue;
+			transition: width 2s, height 2s, background 1s; /* geçiş işlemni bu taga açıyoruz. 2s yani 2 seconds. 
+			zamanları hover classında değil ana class da tanımlıyoruz. yapılacak değişiklikleri hover classında tanımlıyoruz. */
+			-webkit-transition: width 2s, height 2s, background 1s; /* diğer tarayıcılar için aynı komutu ekliyoruz*/
+			transition-delay: 1s; /* 1sn sonra değişim işlemini başlatır. */
+			margin-bottom: 10px;
+		}
+
+		.card:hover {
+			width: 250px;				
+		}
+		
+		#card1{
+			transition-timing-function: ease; /* varsayılan ease dir. yavaş başlayıp hızlanıyor bitmeye yakın yavaşlar. */
+		}
+		#card2{
+			transition-timing-function: linear; /* hep aynı sürede, lineer bir hızda değişir.  */
+		}
+		#card3{
+			transition-timing-function: ease-in; /* yavaş başlayıp hızlanır ve hızlı bitirir. */
+		}
+		#card4{
+			transition-timing-function: ease-out; /* hızlı başlayıp yavaşlanır ve yavaş bitirir */
+		}
+		#card5{
+			transition-timing-function: ease-in-out; /* yavaş başlayıp yavaş bitirir */
+		}
+
+	</style>
+</head>
+
+<body>
+
+	<div id="card1" class="card"></div>
+	<div id="card2" class="card"></div>
+	<div id="card3" class="card"></div>
+	<div id="card4" class="card"></div>
+	<div id="card5" class="card"></div>
+
+</body>
+
+</html>

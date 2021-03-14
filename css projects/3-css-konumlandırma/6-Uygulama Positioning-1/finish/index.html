@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Positioning</title>
+	<style>
+
+		/*
+		static positioning: defaultta olan alt alta konumlandırma
+		relative: left-right-top-bottom ile belirli px boyunca öteleyebiliriz. öteleme önceki element baz alınarak
+		yani bulunduğu asıl konumdan itibaren gerçekleşir
+		absolute: normal akışın dışına çıkarak sayfanın 0,0 noktasından left-right-top-bottom ile öteleme gerçekleşir. 
+		fixed: left-right-top-bottom ile konumlama yapılır. scroll bar ile aşağı kaydırılsa bile elementin konumu değişmez. 
+		sticky: left-right-top-bottom ile hangi konuma sabitlersek aşağı kayarken o da gelir. üst menüler sticky ile 
+		yapılır. 
+		*/
+	
+		.box{
+			width: 120px;
+			height: 120px;
+		}
+		
+		.mbox{
+			width: 30px;
+			height: 30px;
+			background: yellow;
+			position: absolute;
+			top: 50px;
+			left: 50px;
+		}
+		
+		#first{
+			background: red;
+			width: 100%;
+			
+			position: sticky;
+			top: 50px;
+		}
+		#second{
+			background: blue;	
+			position: relative; /* burayı relative yapıyoruz çünkü yukarıda mbox ı 50x50 konumuna yerleştirdik. 
+			bu yerleşme sayfanın 0x0 noktasından başladı. bizim istediğimiz second div inden başlaması idi. 
+			second divini relative yapınca bu sorun çözüldü. */  
+		}
+		#third{
+			background: green;
+			position: fixed;
+			bottom: 0;
+			right: 0;
+		}
+		 
+	</style>
+</head>
+<body>	
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel accusamus praesentium perspiciatis architecto tempora, rerum sunt quam totam aliquam, tempore hic delectus quasi id nostrum, optio rem. Velit enim, quod!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, totam. Amet repellat totam odio natus, quibusdam magnam aut animi maiores repudiandae? Facere adipisci, unde, ullam eius quos quasi tenetur mollitia.</p>
+	
+	<div class="box" id="first">box 1</div>
+	<div class="box" id="second">
+		<div class="mbox"></div>	
+	</div>
+	<div class="box" id="third">box 3</div>	
+	
+	<div style="height: 2000px;"></div>
+	
+</body>
+</html>
