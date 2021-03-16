@@ -1,13 +1,13 @@
-const taskList = document.querySelector('#task-list');
+const taskList = document.querySelector('#task-list'); // ilgili yerdeki ul nesnesini seçti
 
 // ** removing element
-// taskList.remove();
-// taskList.childNodes[7].remove();
+// taskList.remove(); ul nesnesini silmiş oldu
+// taskList.childNodes[1].remove(); 1. indexteki elemanı siler
 // taskList.children[3].remove();
 // taskList.removeChild(taskList.children[3]);
 
 // ** removing attribute
-// taskList.children[1].removeAttribute('class');
+// taskList.children[1].removeAttribute('class'); 1. children ın class özelliğini siler
 // for(let i=0;i<taskList.children.length;i++){
 //     taskList.children[i].removeAttribute('class');
 // }
@@ -32,8 +32,8 @@ let val;
 
 link = taskList.children[0].children[0];
 
-// val = link.className;
-// val = link.classList;
+// val = link.className; // class isimlerini verir
+// val = link.classList; // class ları listeleyip verdi
 // val = link.classList[0];
 // val = link.classList[1];
 
@@ -41,10 +41,10 @@ link.classList.add('new');
 link.classList.remove('new');
 
 // Attributes
-val = link.getAttribute('data-id');
-val = link.getAttribute('href');
-val = link.setAttribute('href','http://sadikturan.com');
-val = link.hasAttribute('data-val');
+val = link.getAttribute('data-id'); // attribute unun değerini verir
+val = link.getAttribute('href'); // href attribute u değere sahip olmadığı için boş dönecek
+val = link.setAttribute('href','http://sadikturan.com'); // href etiketinin içini dolduruyoruz
+val = link.hasAttribute('data-val'); // true false döner
 
 
 console.log(val);
