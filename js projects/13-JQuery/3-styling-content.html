@@ -1,0 +1,66 @@
+<html>
+
+    <head>    
+        <title>Jquery</title>   
+     <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+
+    </head>
+
+    <body>
+        <a href="#">link</a>
+        <h3 id="header">JQuery Dersleri</h3>
+        <ul id="liste">
+            <li class="item">JQuery Reference</li>
+            <li>Selectors <a href="#">link</a></li>
+            <li class="item">JQuery Plugins</li>
+        </ul> 
+      
+        <script>
+          
+            document.getElementById("header").style.color="red";
+            
+            $("#header").css("color","blue"); // bir üstteki komutla aynı işi yaptı. yani header id si olan
+            // etiketlerin yazı rengini maviye çevirdi            
+            $("#liste a").css("text-decoration","none");
+            $("a").css("text-decoration","none");
+            
+            
+            var styles={
+                color:"yellow",
+                fontSize:"20px",
+                border:"1px solid red"
+            }
+            
+            $("ul li").css(styles); // birden fazla özellik tanımladık
+            
+            
+            var listeler = document.querySelectorAll("li"); // js ile toplu seçim işlemi bu şekilde gerçekleştirilirdi
+            
+            for(var i=0; i<listeler.length;i++)
+                {
+                    listeler[i].style.color="red";
+                }
+            
+            $("a").css({ // değişken oluşturmadan tek tek yazılarak da yapılabilir
+                color:"yellow",
+                fontSize:"20px",
+                border:"1px solid red"
+                
+            });
+            
+            $(".item").css({ // item class a sahip olan etiketleri görünmez kıldı
+                display:"none"
+            });
+            
+        </script>
+        
+    </body>
+
+
+
+
+
+</html>

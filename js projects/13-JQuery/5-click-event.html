@@ -1,0 +1,59 @@
+<html>
+
+    <head>    
+        <title>Jquery</title>   
+     <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+        
+        <style>
+        
+            .paragrafrenklendir{
+                color: red;
+                font-size: 25px;
+            }
+            
+        </style>
+
+    </head>
+
+    <body>
+        
+        <p id="p1">Web Developer Eğitimi</p>
+        
+         <p id="p2">Web Developer Eğitimi</p>
+        
+         <p class="paragraf">Web Developer Eğitimi</p>
+        
+         <p class="paragraf">Web Developer Eğitimi</p>
+     
+        <script>
+            
+            
+            $(document).ready(function(){ // kimi durumlarda html kodu hazır olmadan js kodu çalışmaya 
+                // başlayabilir. bu durumun önüne geçmek için ready function kullanılır.
+                // normalde script kodları en alta yazılır çünkü önce html css kodları çalışsın sonra
+                // js çalışsın deriz. ready function ı en üste style üstüne de yazabiliriz çünkü
+                // çalışmak için sayfanın tamamının yüklenmesini bekleyecek
+                    
+                $(".paragraf").click(function(){ // click event sadece buton üstünde olmak zorunda değil
+                    // sayfa içerisindeki tüm elementlere atanabilir.
+                    // paragraf class lı etiketlere tıklandığında fonksiyon çalışacak
+                    
+                    $(this).addClass("paragrafrenklendir"); // this ile tekrardan paragraf class ına eriştik.
+                    // erişmemiz gerekiyor
+                    // $(.paragraf).addClass("paragrafrenklendir"); böyle de olabilirdi
+                });
+                
+                
+            });
+            
+          
+            
+            
+        </script>
+        
+    </body>
+
+</html>
