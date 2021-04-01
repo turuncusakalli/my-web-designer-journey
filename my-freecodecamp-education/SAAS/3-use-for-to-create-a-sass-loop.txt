@@ -1,0 +1,20 @@
+<style type='text/scss'>
+  @for $j from 1 to 6{
+    .text-#{$j} {
+      font-size: 15px*$j;
+    }
+  }
+  
+  //for döngüsü oluşturuldu. @for $j from 1 to 6 => 1 den 6 ya kadar ama 6 dahil değil.
+  //@for $j from 1 through 6 => 1 den 6 ya kadar ve 6 dahil.
+  // .text-#{$j} text-1(2-3-4-) olarak saydırır. 
+  
+
+
+</style>
+
+<p class="text-1">Hello</p>
+<p class="text-2">Hello</p>
+<p class="text-3">Hello</p>
+<p class="text-4">Hello</p>
+<p class="text-5">Hello</p>

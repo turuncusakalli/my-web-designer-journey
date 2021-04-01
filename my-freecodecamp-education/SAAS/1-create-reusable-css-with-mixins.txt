@@ -1,0 +1,25 @@
+<style type='text/scss'>
+@mixin border-radius($radius){
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+/*
+mixin fonksiyon gibidir. border-radius fonksiyon adıdır.
+radius parametredir. her tarayıcı için ayrı ayrı değer verilir
+*/
+
+
+  #awesome {
+    width: 150px;
+    height: 150px;
+    background-color: green;
+    @include border-radius(15px);
+    // mixin yani fonksiyonu çağırdık.
+
+  }
+</style>
+
+<div id="awesome"></div>

@@ -1,0 +1,27 @@
+<style type='text/scss'>
+
+  @each $color in blue, black, red{
+    .#{$color}-bg {background-color: $color}
+  }
+
+
+/*
+  for ile her bir değer üzerinde dönmek için @each kullanılır.
+  her renk adlı class a o renk bg color verdik.
+
+  key olarak aşağıdaki gibi kullanım söz konusu
+  */
+  //$colors: (color1: blue, color2: red, color3: green);
+
+// @each $key, $color in $colors {
+  // .#{$color}-text {color: $color;}
+
+  div {
+    height: 200px;
+    width: 200px;
+  }
+</style>
+
+<div class="blue-bg"></div>
+<div class="black-bg"></div>
+<div class="red-bg"></div>

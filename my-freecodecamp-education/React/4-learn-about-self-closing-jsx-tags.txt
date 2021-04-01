@@ -1,0 +1,12 @@
+const JSX = (
+  <div>
+    <h2>Welcome to React!</h2> <br />
+    <p>Be sure to close all tags!</p>
+    <hr />
+  </div>
+);
+/*
+JSX de tag yapısı da farklıdır. br açma kapamalı değildir ama burada slaş işaretini
+örnekteki gibi kullanmak gerekir. ya da hr tag ini örnekteki gibi. div etiketi ise
+<div /> or <div></div> şekillerinde yazılabilir. ilerleyen örneklerde göreceğiz
+*/

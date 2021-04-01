@@ -1,0 +1,24 @@
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: 'freeCodeCamp'
+    }
+  }
+  render() {
+    // state yapısında return den önce renderdan sonra yani tam bu konuma
+    // js kodları yazılabilir.
+    // Change code below this line
+    const name=this.state.name;
+    // Change code above this line
+    return (
+      <div>
+        { /* Change code below this line */ }
+        <h1>{name}</h1>
+        {/* Eğer değişkenleri render içine aktarırsak, this.state ile
+        değişkeni seçmeye gerek kalmaz. direkt değişken adıyla çağırılabilir.  */}
+        { /* Change code above this line */ }
+      </div>
+    );
+  }
+};
